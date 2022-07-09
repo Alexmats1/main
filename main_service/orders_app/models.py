@@ -16,10 +16,10 @@ class Device(models.Model):
         verbose_name_plural = "Доступное оборудование"
 
     manufacturer = models.TextField(verbose_name="Производитель")
-    moded = models.TextField(verbose_name="Модель")
+    model = models.TextField(verbose_name="Модель")
 
     def __str__(self):
-        return f"{self.manufacturer} {self.model}"
+        return f"{self.manufacturer}{self.model}"
 
 
 class Customer(models.Model):
